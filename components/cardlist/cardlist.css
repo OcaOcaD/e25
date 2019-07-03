@@ -1,0 +1,80 @@
+.cardlist{
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1D1D1B;
+    padding: .5em;
+    padding-bottom: 40px;
+}
+    .cardlist__title{
+        padding-top: .5em;
+        padding-bottom: .5em;
+        line-height: 100%;
+        color: #A42035;
+        font-size: 150%;
+    }
+    .cardlist__container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 90%;
+        min-height: 80%
+    }
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 17vw;
+            padding-left: 2em;
+            padding-right: 2em;
+            border: 2px solid #1D1D1B;
+            border-radius: 5px;
+            background-color: #9D9D9C;
+            transition: background-color .4s ease-out;
+            cursor: pointer;
+        }
+            .card-img{
+                height: 50%;
+                max-width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+                .card-img img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    border-radius: 5px;
+                    filter: grayscale(100%);
+                    transition: filter .4s ease-out;
+                }
+            .card-info{
+                text-align: center;
+                height: 35%;
+                margin-top: 0.2em;
+                margin-bottom: 0.2em;
+            }
+                .card-info h1{
+                    font-size: 150%;
+                    font-weight: 800;
+                    margin-top: 0;
+                    color: #1D1D1B;
+                    transition: color .2s ease-in;
+                }
+                .card-info h3{
+                    font-size: 120%;
+                    font-weight: 600;
+                }
+        .card:hover{
+            background-color: white;
+        }
+        .card:hover .card-img__img{
+            filter: none;
+        }
+        .card:hover .card-title {
+            color: #A42035;
+        }
+        
