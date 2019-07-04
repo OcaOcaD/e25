@@ -33,7 +33,7 @@
             $aux_card->set_title( $eP['ename'] );
             $aux_card->set_description( $eP['description'] );
             $aux_card->set_img( $eP['img'] );
-            $category = $eP['cname'];
+            $aux_card->set_id_cat( $eP['id_category'] );
             $cl->push( $aux_card );
         }
     }
@@ -50,18 +50,16 @@
             <?php
             for ( $j = 0; $j < 3 && ( isset($cl[$k]) && $cl[$k] != null ) ; $j++ ){
             ?>
-
-                    <div class="project__container">
-                        <div class="project__container__top">
-                            <img src="img/projects/<?php echo $cl[$k]->get_img()?>.jpg" alt="">
-                            <button class="project__details">VER MÁS</button>
-                            <div class="project__shadow"></div> 
-                        </div>
-                        <div class="project__container__bottom">
-                            <h3><?php echo $cl[$k]->get_title() ?></h3>
-                        </div>    
+                <div class="project__container">
+                    <div class="project__container__top">
+                        <img src="img/projects/<?php echo $cl[$k]->get_img()?>.jpg" alt="">
+                        <button id="<?php echo $cl[$k]->get_id()?>" name="<?php echo $cl[$k]->get_id_cat(); ?>" class="project__details" onclick="selectProject(this.name, this.id)">VER MÁS</button>
+                        <div class="project__shadow"></div> 
                     </div>
-
+                    <div class="project__container__bottom">
+                        <h3><?php echo $cl[$k]->get_title() ?></h3>
+                    </div>    
+                </div>
 
             <?php $k++;
             } ?>

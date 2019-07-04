@@ -1,31 +1,64 @@
 <?php 
-    if ( isset($_GET['c']) && isset($_GET['p']) ){
-        //Category and project are selectet
-        ?>
-        
-        <?php 
-    }else if( isset($_GET['c']) && !isset($_GET['p']) ) {
-        //There is a category selected, but not a project
-        ?>
-        <div class="projectSelector">
-            <div class="projectSelector__title">
-        
-            </div>
-            <div class="projectSelector__container">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="<?php echo $card[$i]->get_img() ?>" alt="None" class="card-img__img"/>
-                    </div>
-                    <div class="card-info">
-                        <h1 class="card-title"><?php echo $card[$i]->get_title() ?></h1>
-                        <h3><?php echo $card[$i]->get_description() ?></h3>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <?php
-    }else{
-        echo "JAJJAJAJAJAJAJA NOOB";
+    include("../../utilities/db.php");
+    include("../card/card.php");
+    $c = $_POST['category'];
+    $p = $_POST['project'];
+    //echo "MOSTRANDO A DETALLE EL PROJECTO ".$p."<br>";
+    //Download teh project information
+    $cProj_query = "SELECT * FROM
+                        e25_project 
+                    WHERE
+                        id_project = {$p}  ";
+    //echo $cProj_query."<br>";   
+    $eProj = mysqli_query($connection, $cProj_query);
+    //var_dump($eProj);
+    if ( $eProj ){
+        $eProj_rows = mysqli_num_rows($eProj);
+        //For each project of that category build a Card
+        $eP = mysqli_fetch_array($eProj, MYSQLI_ASSOC);
+        $aux_card = new Card;
+        $aux_card->set_id( $eP['id_project'] );
+        $aux_card->set_title( $eP['name'] );
+        $aux_card->set_description( $eP['description'] );
+        $aux_card->set_img( $eP['img'] );
+    }
+    //Download the project images
+    $images_query = " SELECT * FROM e25_images WHERE project_id = {$p}";
+    $images = mysqli_query($connection, $images_query);
+    if ( $images ){
+        $images_rows = mysqli_num_rows($images);
+        $il = new SplDoublyLinkedList;
+        for ($i=0; $i < $images_rows; $i++) { 
+            $i_name = mysqli_fetch_array($images);
+            $image = $i_name['name'];
+            $il->push($image);
+        }
     }
 ?>
+<div class="showP">
+    <div class="showP__project">
+        <div class="showP__media">
+            <div class="showP__actualImage">
+                <?php include("../projectCarousel/projectCarousel.php"); ?>
+            </div>
+            <div class="showP__projectImages">
+                <?php for( $i = 0; $i < sizeof($il); $i++ ){
+                    $width = 100/ sizeof($il);
+                    ?>
+                    <div class="small__img" style="width: <?php echo $width?>%">
+
+                    </div>
+                <?php } ?>
+                <!-- All the images of the project in small size-->
+            </div>
+        </div>
+        <div class="showP__info">
+            <h1 cl class="showP__title"><?php echo $aux_card->get_title() ?></h1>
+            <hr class="showP__separator">
+            <p class="showP__description" ><?php echo $aux_card->get_description() ?></p>
+        </div>
+    </div>
+    <div class="showP__others">
+        <!--CArousel con sugerencias-->
+    </div>
+</div>

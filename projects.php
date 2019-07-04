@@ -15,7 +15,7 @@
         $category = $_GET['c'];
         $project  = $_GET['p'];
     }  
-    echo "<input class='info' type='text' style='display: block' name='".$category."' value='".$project."' >";
+    echo "<input class='info' type='text' style='display: none' name='".$category."' value='".$project."' >";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="components/navbar/navbar.css">
     <link rel="stylesheet" href="components/portfolio/portfolio.css">
     <link rel="stylesheet" href="components/portfolio/categoryShower.css">
+    <link rel="stylesheet" href="components/portfolio/showProject.css">
+    <link rel="stylesheet" href="components/projectCarousel/projectCarousel.css">
 
     <link rel="stylesheet" href="components/footer/footer.css">
     <title>ESTANCIA 25</title>
@@ -33,22 +35,7 @@
     <?php
     include("components/navbar/navbar.php");
     echo "<div class='projectMainContainer'></div>";
-    //Load the requiered view
-        if ( !isset($category) || ( isset($category) && $category == null) ){
-            //Show category selector
-            echo "Show category selector";
-        }
-        if ( isset($category) && $category != null && ( !isset($project) || $project == null ) ){
-            //Show the projects od the selected category
-            echo "Show the projects od the selected category";
-            
-        }
-        if ( isset($category) && $category != null && isset($project) && $project != null  ){
-            //Show the details of the selected project
-            echo "Show the details of the selected project";
-
-        }
-
+    
 
     include("components/footer/footer.html");
     
@@ -57,5 +44,6 @@
     <!--Adding some javascript for components here-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="projects.js"></script>
+    <!--<script src="components/projectCarousel/projectCarousel.js"></script>-->
 </body>
 </html>

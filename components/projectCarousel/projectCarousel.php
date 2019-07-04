@@ -1,3 +1,28 @@
+<?php 
+$c = $_POST['category'];
+$p = $_POST['project'];
+?>
+
+<div class="carousel-wrapper">
+<div class="carousel">
+    <?php 
+    for ( $i = 0; $i < sizeof($il); $i++ ){
+        $initial = ( $i == 0 ) ? " initial" : null;
+        echo "<img id='' class='carousel__photo".$initial."' src='img/projects/".$il[$i].".jpg'>";
+    }
+    ?>    
+<!--
+    <img id="initial_img" class="carousel__photo initial" src="img/carousel/1.jpg">
+
+    <img class="carousel__photo" src="img/carousel/2.jpg">
+    <img class="carousel__photo" src="img/carousel/3.jpg">
+    <img class="carousel__photo" src="img/carousel/4.jpg">
+-->
+    <div class="carousel__button--next"></div>
+    <div class="carousel__button--prev"></div>
+</div>
+</div>
+<script>
 !(function(d){
     // All code will go in here. We've renamed 'document' to 'd'.
     var itemClassName = "carousel__photo";
@@ -123,3 +148,4 @@ function moveCarouselTo(slide) {
     moving = false;
   }
   }(document));
+</script>

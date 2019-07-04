@@ -5,12 +5,14 @@
         private $title;
         private $description;
         private $img;
+        private $id_cat;
         //CTOR
         public function __construct(){
             $this->id = -1;
             $this->title = "";
             $this->description = "";
             $this->img = "";
+            $this->id_cat = -1;
         }
         //GETS
         public function get_id(){
@@ -25,8 +27,11 @@
         public function get_img(){
             return $this->img;
         }
-        //SETS
-        public function set_id( $id ){
+        public function get_id_cat(){
+            return $this->id_cat;
+        }
+            //SETS
+            public function set_id( $id ){
             $this->id = $id;
         }
         public function set_title( $title ){
@@ -37,6 +42,9 @@
         }
         public function set_img( $img ){
             $this->img = $img;
+        }
+        public function set_id_cat( $id_cat ){
+            $this->id_cat = $id_cat;
         }
         //METHODS
         public function buildCard( $copy_card ){

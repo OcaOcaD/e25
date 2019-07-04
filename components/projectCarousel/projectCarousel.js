@@ -10,7 +10,7 @@
 function setInitialClasses() {
     // Targets the previous, current, and next items
     // This assumes there are at least three items.
-    console.log(totalItems);
+    console.log('items'+items.length);
     items[totalItems - 1].classList.add("prev");
     items[0].classList.add("active");
     items[1].classList.add("next");

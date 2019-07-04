@@ -1,6 +1,9 @@
 function selectCategory(c){
     window.location = 'projects.php?c='+c;
 }
+function selectProject(c,p){
+    window.location = 'projects.php?c='+c+'&p='+p;
+}
 !(function(d){
     jinfo = $(".info");
     const c = jinfo.attr('name');
@@ -16,6 +19,12 @@ function selectCategory(c){
         if ( (c != null && p == null) || (c != '' && p == '') ){
             $(mainView).load('components/portfolio/categoryShower.php',{
                 category: c
+            });
+        }else if( (c != null && p != null) || (c != '' && p != '') ){
+            console.log("ACTUALLY SOMETHING SOMETHING");
+            $(mainView).load('components/portfolio/showProject.php',{
+                category: c,
+                project: p
             });
         }
     }
