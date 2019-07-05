@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-07-2019 a las 06:33:49
+-- Tiempo de generación: 05-07-2019 a las 05:40:26
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -48,13 +48,36 @@ INSERT INTO `e25_category` (`id_category`, `name`, `description`, `cover`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `e25_images`
+--
+
+CREATE TABLE `e25_images` (
+  `project_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `e25_images`
+--
+
+INSERT INTO `e25_images` (`project_id`, `name`) VALUES
+(75, 'Project1'),
+(75, 'Project2'),
+(75, 'Project3'),
+(75, 'Project4'),
+(75, 'Project5'),
+(75, 'Project6');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `e25_project`
 --
 
 CREATE TABLE `e25_project` (
   `id_project` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `description` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `description` text CHARACTER SET utf8 NOT NULL,
   `img` varchar(40) CHARACTER SET utf8 NOT NULL,
   `category` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
