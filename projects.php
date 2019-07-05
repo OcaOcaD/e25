@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="components/portfolio/categoryShower.css">
     <link rel="stylesheet" href="components/portfolio/showProject.css">
     <link rel="stylesheet" href="components/projectCarousel/projectCarousel.css">
+    <link rel="stylesheet" href="components/otherProjects/otherProjects.css">
 
     <link rel="stylesheet" href="components/footer/footer.css">
     <title>ESTANCIA 25</title>

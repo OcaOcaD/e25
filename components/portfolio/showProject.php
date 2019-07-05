@@ -36,6 +36,10 @@
     }
 ?>
 <div class="showP">
+    <button class="back__button" onclick="">
+        <small ><i class="far fa-hand-point-left"></i> Regresar</small>
+    </button>
+    
     <div class="showP__project">
         <div class="showP__media">
             <?php include("../projectCarousel/projectCarousel.php"); ?>
@@ -51,5 +55,9 @@
     </div>
     <div class="showP__others">
         <!--CArousel con sugerencias-->
+        <h1 class="showP__others__title">MÁS <?php echo strtoupper("LA CATEGORIA") ?></h1>
+        <?php
+            include("../otherProjects/otherProjects.php");
+        ?>
     </div>
 </div>

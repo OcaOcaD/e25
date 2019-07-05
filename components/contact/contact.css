@@ -80,6 +80,10 @@
                 color: white;
             }
             .contact__button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 600;
                 background-color: #1d1d1d;
                 border: 1px solid #a42035;
                 color: #a42035;
@@ -87,9 +91,6 @@
                 height: 40px;
                 margin-top: 2em;
                 line-height: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 cursor: pointer;
                 transition: background-color .3s ease-in-out, border .3s ease-out, color .3s ease-out;
             }

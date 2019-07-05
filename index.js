@@ -1,17 +1,20 @@
+function goToByScroll(id) {
+    // Remove "link" from the ID
+    // Scroll
+    var element = $(id);
+    /*console.log('element: '+element);*/
+    var offset = element.offset();
+    var topDistnce = offset.top;
+    /*console.log('offset top: '+offset.top);*/
+    //topDistnce = topDistnce-50;
+    /*console.log('offset top: '+offset.top);*/
+    $('html, body').animate({scrollTop: topDistnce}, 800);    
+}
+
+
+
 !(function(d){
     //Go to some id by smooth scrolling
-    function goToByScroll(id) {
-        // Remove "link" from the ID
-        // Scroll
-        var element = $(id);
-        /*console.log('element: '+element);*/
-        var offset = element.offset();
-        var topDistnce = offset.top;
-        /*console.log('offset top: '+offset.top);*/
-        //topDistnce = topDistnce-50;
-        /*console.log('offset top: '+offset.top);*/
-        $('html, body').animate({scrollTop: topDistnce}, 800);    
-    }
     function changeNavBG(type){
         nb = d.getElementsByClassName("shadow");
         logotipo = d.getElementsByClassName("navbar__logo__img");

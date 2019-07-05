@@ -3,6 +3,8 @@
     flex-direction: column;
     width: 100vw;
     height: auto;
+    min-height: calc( 100vh - 100px );  
+    padding-top: calc( 100px + 1em );
     background-color: #1d1d1b;
 }
     .cProj__title{
@@ -52,11 +54,16 @@
                     margin: 0;
                     border: 1px solid white;
                     background: transparent;
+                    font-weight: 600;
                     color: white;
                     cursor: pointer;
                     opacity: 0;
-                    transition: opacity 0.3s ease-out;
+                    transition: opacity 0.3s ease-out, color 0.3s ease-out, background-color 0.3s ease-out;
                     z-index: 110;
+                }
+                .project__details:hover{
+                    color: #A42035;
+                    background-color: white;
                 }
                 .project__shadow{
                     position: absolute;

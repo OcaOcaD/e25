@@ -29,29 +29,4 @@ function selectProject(c,p){
         }
     }
 
-    function changeView( info ){
-        console.log(info);
-        const c =  info.attr('name');
-        const p = info.attr('value');
-        console.log(c);
-        console.log(p);
-        switch ( info ){
-            case 1:{
-
-                break;
-            }
-            case 1:{
-
-                break;
-            }
-            case 1:{
-
-                break;
-            }
-            case 1:{
-
-                break;
-            }
-        }
-    }
 }(document));

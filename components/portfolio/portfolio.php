@@ -17,25 +17,28 @@ if ( $category ){
     }
 }   
 ?>
-<div id="services" class="cardlist">
-    <div class="cardlist__title">
-        <h1>Selecciona un portafolio</h1>
-    </div>
-    <div class="cardlist__container">
-        <?php
-        for ( $i = 0; $i <= sizeof( $cl )-1; $i++ ){
-        ?>
-            <div id="<?php echo $cl[$i]->get_id() ?>" class="card" onclick="selectCategory(this.id)">
-                <div class="card-img">
-                    <img src="img/project_categories/<?php echo $cl[$i]->get_img(); ?>.jpg" alt="None" class="card-img__img"/>
+<div class="portfolio__container">
+    <div id="services" class="cardlist">
+        <div class="cardlist__title">
+            <h1>Selecciona un portafolio</h1>
+        </div>
+        <div class="cardlist__container">
+            <?php
+            for ( $i = 0; $i <= sizeof( $cl )-1; $i++ ){
+            ?>
+                <div id="<?php echo $cl[$i]->get_id() ?>" class="card" onclick="selectCategory(this.id)">
+                    <div class="card-img">
+                        <img src="img/project_categories/<?php echo $cl[$i]->get_img(); ?>.jpg" alt="None" class="card-img__img"/>
+                    </div>
+                    <div class="card-info">
+                        <h1 class="card-title"><?php echo $cl[$i]->get_title() ?></h1>
+                        <h3><?php echo $cl[$i]->get_description() ?></h3>
+                    </div>
                 </div>
-                <div class="card-info">
-                    <h1 class="card-title"><?php echo $cl[$i]->get_title() ?></h1>
-                    <h3><?php echo $cl[$i]->get_description() ?></h3>
-                </div>
-            </div>
-        <?php
-        }
-        ?>
-    </div>
-</div> 
+            <?php
+            }
+            ?>
+        </div>
+    </div> 
+
+</div>

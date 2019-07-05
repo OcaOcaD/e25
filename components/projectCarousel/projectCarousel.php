@@ -47,9 +47,6 @@ function setEventListeners() {
         prev = d.getElementsByClassName('carousel__button--prev')[0];
     next.addEventListener('click', moveNext);
     prev.addEventListener('click', movePrev);
-    
-    buton = d.getElementsByClassName('botondeprueba')[0];
-
     imageItems = d.getElementsByClassName('small__img__img');
     for( let i = 0; i < imageItems.length; i++ ){
         console.log("event listener"+i);
@@ -99,8 +96,6 @@ function disableInteraction() {
     }, 500);
 }
 function moveTo(foo){
-    console.log("hola");
-    console.log(foo);     // logs "bar"
     moveCarouselTo(foo);
 }
 function moveCarouselTo(slide) {
