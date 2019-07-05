@@ -3,25 +3,34 @@ $c = $_POST['category'];
 $p = $_POST['project'];
 ?>
 
-<div class="carousel-wrapper">
-<div class="carousel">
-    <?php 
-    for ( $i = 0; $i < sizeof($il); $i++ ){
-        $initial = ( $i == 0 ) ? " initial" : null;
-        echo "<img id='' class='carousel__photo".$initial."' src='img/projects/".$il[$i].".jpg'>";
-    }
-    ?>    
-<!--
-    <img id="initial_img" class="carousel__photo initial" src="img/carousel/1.jpg">
+<div class="showP__actualImage">
+    <div class="carousel-wrapper">
+    <div class="carousel">
+        <?php 
+        for ( $i = 0; $i < sizeof($il); $i++ ){
+            $initial = ( $i == 0 ) ? " initial" : null;
+            echo "<img id='' class='carousel__photo".$initial."' src='img/projects/".$il[$i].".jpg'>";
+        }
+        ?>    
+        <div class="carousel__button--next"></div>
+        <div class="carousel__button--prev"></div>
+    </div>
+    </div>
+</div>
+<div class="showP__projectImages">
+    <button class="botondeprueba" name="3">
+        PROBANDO
+    </button>
+    <?php for( $i = 0; $i < sizeof($il); $i++ ){
+        $width = 100/ sizeof($il);
+        ?>
+        <div class="small__img" style="width: <?php echo $width?>%">
+            <img class="small__img__img" src="img/projects/<?php echo $il[$i]?>.jpg" name="<?php echo $i ?>" alt="Image not available">
+        </div>
+    <?php } ?>
+    <!-- All the images of the project in small size-->
+</div>
 
-    <img class="carousel__photo" src="img/carousel/2.jpg">
-    <img class="carousel__photo" src="img/carousel/3.jpg">
-    <img class="carousel__photo" src="img/carousel/4.jpg">
--->
-    <div class="carousel__button--next"></div>
-    <div class="carousel__button--prev"></div>
-</div>
-</div>
 <script>
 !(function(d){
     // All code will go in here. We've renamed 'document' to 'd'.
@@ -35,7 +44,7 @@ $p = $_POST['project'];
 function setInitialClasses() {
     // Targets the previous, current, and next items
     // This assumes there are at least three items.
-    console.log(totalItems);
+    //console.log(totalItems);
     items[totalItems - 1].classList.add("prev");
     items[0].classList.add("active");
     items[1].classList.add("next");
@@ -46,6 +55,20 @@ function setEventListeners() {
         prev = d.getElementsByClassName('carousel__button--prev')[0];
     next.addEventListener('click', moveNext);
     prev.addEventListener('click', movePrev);
+    
+    buton = d.getElementsByClassName('botondeprueba')[0];
+
+    imageItems = d.getElementsByClassName('small__img__img');
+    for( let i = 0; i < imageItems.length; i++ ){
+        console.log("event listener"+i);
+        imageItems[i].addEventListener('click', function(){
+            moveTo(i);
+        });
+    }
+    console.log("Éste es el button.name, el id a dónde me quiero deslizar: "+buton.name);
+    buton.addEventListener('click', function(){
+        moveTo(3);
+    });
 }
 // Next navigation handler
 function moveNext() {
@@ -87,8 +110,13 @@ function disableInteraction() {
       moving = false
     }, 500);
 }
-
+function moveTo(foo){
+    console.log("hola");
+    console.log(foo);     // logs "bar"
+    moveCarouselTo(foo);
+}
 function moveCarouselTo(slide) {
+    console.log("USANDO FUNCIÓN MoveCarouselTo()"+slide);
     // Check if carousel is moving, if not, allow interaction
     if(!moving) {
       // temporarily disable interactivity
@@ -146,6 +174,9 @@ function moveCarouselTo(slide) {
     setEventListeners();
     // Set moving to false so that the carousel becomes interactive
     moving = false;
+  }
+  function changeActive( id ){
+
   }
   }(document));
 </script>

@@ -38,19 +38,7 @@
 <div class="showP">
     <div class="showP__project">
         <div class="showP__media">
-            <div class="showP__actualImage">
-                <?php include("../projectCarousel/projectCarousel.php"); ?>
-            </div>
-            <div class="showP__projectImages">
-                <?php for( $i = 0; $i < sizeof($il); $i++ ){
-                    $width = 100/ sizeof($il);
-                    ?>
-                    <div class="small__img" style="width: <?php echo $width?>%">
-
-                    </div>
-                <?php } ?>
-                <!-- All the images of the project in small size-->
-            </div>
+            <?php include("../projectCarousel/projectCarousel.php"); ?>
         </div>
         <div class="showP__info">
             <h1 cl class="showP__title"><?php echo $aux_card->get_title() ?></h1>

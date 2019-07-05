@@ -9,7 +9,6 @@
         width: 100%;
         display: flex;
         padding: 1em;
-
     }
         .showP__media{
             order:1;
@@ -31,10 +30,18 @@
                 width: 100%;
             }
                 .small__img{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     margin-left: 0.5em;
                     margin-right: 0.5em;
                     height: 100%;
                     background-color: aquamarine;
+                }
+                .small__img__img{
+                    cursor: pointer;
+                    max-width: 100%;
+                    max-height: 100%;
                 }
         .showP__info{
             order:2;
