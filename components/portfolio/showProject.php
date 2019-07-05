@@ -42,7 +42,10 @@
         </div>
         <div class="showP__info">
             <h1 cl class="showP__title"><?php echo $aux_card->get_title() ?></h1>
-            <hr class="showP__separator">
+            <div class="showP__separator__container">
+                <hr class="showP__separator">
+
+            </div>
             <p class="showP__description" ><?php echo $aux_card->get_description() ?></p>
         </div>
     </div>

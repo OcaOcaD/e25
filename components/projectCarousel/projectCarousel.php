@@ -1,8 +1,3 @@
-<?php 
-$c = $_POST['category'];
-$p = $_POST['project'];
-?>
-
 <div class="showP__actualImage">
     <div class="carousel-wrapper">
     <div class="carousel">
@@ -18,9 +13,6 @@ $p = $_POST['project'];
     </div>
 </div>
 <div class="showP__projectImages">
-    <button class="botondeprueba" name="3">
-        PROBANDO
-    </button>
     <?php for( $i = 0; $i < sizeof($il); $i++ ){
         $width = 100/ sizeof($il);
         ?>
@@ -65,10 +57,6 @@ function setEventListeners() {
             moveTo(i);
         });
     }
-    console.log("Éste es el button.name, el id a dónde me quiero deslizar: "+buton.name);
-    buton.addEventListener('click', function(){
-        moveTo(3);
-    });
 }
 // Next navigation handler
 function moveNext() {
