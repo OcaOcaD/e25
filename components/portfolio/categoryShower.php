@@ -42,16 +42,16 @@
     <?php
     $k = 0;
     while( isset($cl[$k]) && $cl[$k] != null ){ ?>
-    <div class="cproj__row">
+    <div name="<?php echo $k?>" class="cproj__row">
 
             <?php
             for ( $j = 0; $j <= 3 && ( isset($cl[$k]) && $cl[$k] != null ) ; $j++ ){
             ?>
-                <div class="project__container">
+                <div id="" class="project__container">
                     <div class="project__container__top">
-                        <img src="img/projects/<?php echo $cl[$k]->get_img()?>.jpg" alt="">
+                        <img class="project__container__img" src="img/projects/<?php echo $cl[$k]->get_img()?>.jpg" alt="">
                         <button id="<?php echo $cl[$k]->get_id()?>" name="<?php echo $cl[$k]->get_id_cat(); ?>" class="project__details" onclick="selectProject(this.name, this.id)">
-                            VER TODOS
+                            VER DETALLES
                         </button>
                         <div class="project__shadow"></div> 
                     </div>

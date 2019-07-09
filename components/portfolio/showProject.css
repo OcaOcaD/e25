@@ -2,7 +2,7 @@
     padding-top: calc( 110px + 1em );
     min-height: calc( 100vh - 100px );
     width: 100vw;
-    background-color: #1d1d1b;
+    /*background-color: #1d1d1b;*/
     padding-bottom: calc( 40px + 1em );
 }
     .back__button{
@@ -28,7 +28,7 @@
             display: flex;
             flex-direction: column; 
             height: 100%;
-            width: 65%;
+            width: 60%;
         }
             .showP__actualImage{
                 order:1;
@@ -68,6 +68,7 @@
             flex-direction: column;
             justify-content: left;
             align-items: left;
+            width: 40%;
             margin-left: 2em;
             margin-right: 2em;
         }

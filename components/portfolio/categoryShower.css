@@ -5,7 +5,7 @@
     height: auto;
     min-height: calc( 100vh - 100px );  
     padding-top: calc( 100px + 1em );
-    background-color: #1d1d1b;
+    /*background-color: #1d1d1b;*/
 }
     .cProj__title{
         color: #A42035;

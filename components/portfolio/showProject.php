@@ -3,15 +3,12 @@
     include("../card/card.php");
     $c = $_POST['category'];
     $p = $_POST['project'];
-    //echo "MOSTRANDO A DETALLE EL PROJECTO ".$p."<br>";
     //Download teh project information
     $cProj_query = "SELECT * FROM
                         e25_project 
                     WHERE
                         id_project = {$p}  ";
-    //echo $cProj_query."<br>";   
     $eProj = mysqli_query($connection, $cProj_query);
-    //var_dump($eProj);
     if ( $eProj ){
         $eProj_rows = mysqli_num_rows($eProj);
         //For each project of that category build a Card
@@ -36,7 +33,7 @@
     }
 ?>
 <div class="showP">
-    <button class="back__button" onclick="">
+    <button class="back__button" onclick="window.location = 'projects.php'">
         <small ><i class="far fa-hand-point-left"></i> Regresar</small>
     </button>
     
