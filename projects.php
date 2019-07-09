@@ -1,4 +1,5 @@
 <?php 
+    $pestaña = "projects";
     if( !isset($_GET['c']) && !isset($_GET['p']) ) {
         //NOT CATEGORY AND NOT PROJECT
         $category = null;

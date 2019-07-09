@@ -6,7 +6,7 @@ function goToByScroll(id) {
     var offset = element.offset();
     var topDistnce = offset.top;
     /*console.log('offset top: '+offset.top);*/
-    //topDistnce = topDistnce-50;
+    topDistnce = topDistnce-50;
     /*console.log('offset top: '+offset.top);*/
     $('html, body').animate({scrollTop: topDistnce}, 800);    
 }

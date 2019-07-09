@@ -1,4 +1,4 @@
-<div class="contact">
+<div id="contact" class="contact">
     <div class="contact__background"></div>
     <div class="contact__container">
         <div class="contact__title">
