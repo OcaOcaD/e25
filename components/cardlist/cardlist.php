@@ -30,7 +30,7 @@ if ( $category ){
 ?>
 <div id="services" class="cardlist">
     <div class="cardlist__title">
-        <h1>¿Qué hacemos?</h1>
+        <h1>SERVICIOS</h1>
     </div>
     <div class="cardlist__container">
         <?php
