@@ -37,12 +37,15 @@ if ( $category ){
             for ( $i = 0; $i <= sizeof( $cl )-1; $i++ ){
             ?>
                 <div id="<?php echo $cl[$i]->get_id() ?>" class="card" onclick="selectCategory(this.id)">
-                    <div class="card-img">
-                        <img src="img/projects/<?php echo $cl[$i]->get_img(); ?>.jpg" alt="None" class="card-img__img"/>
-                    </div>
-                    <div class="card-info">
-                        <h1 class="card-title"><?php echo $cl[$i]->get_title() ?></h1>
-                        <h3><?php echo $cl[$i]->get_description() ?></h3>
+                    <div class="card__shadow"></div>
+                    <div class="card__container">
+                        <div class="card-img">
+                            <img src="img/projects/<?php echo $cl[$i]->get_img(); ?>.jpg" alt="None" class="card-img__img"/>
+                        </div>
+                        <div class="card-info">
+                            <h1 class="card-title"><?php echo $cl[$i]->get_title() ?></h1>
+                            <h3 class="card-desc"><?php echo $cl[$i]->get_description() ?></h3>
+                        </div>
                     </div>
                 </div>
             <?php
