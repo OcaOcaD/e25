@@ -7,7 +7,12 @@
     <?php include("src/headers.html"); ?>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="components/navbar/navbar.css">
+    <link rel="stylesheet" href="components/navbar/navbar-sm.css">
+    <link rel="stylesheet" href="components/backdrop/backdrop.css">
+    <link rel="stylesheet" href="components/sideDrawer/sideDrawer.css">
+
     <link rel="stylesheet" href="components/carousel/carousel.css">
+    <link rel="stylesheet" href="components/carousel/carousel-sm.css">
     <link rel="stylesheet" href="components/cardlist/cardlist.css">
     <link rel="stylesheet" href="components/contact/contact.css">
 
@@ -17,6 +22,8 @@
 <body>
     <?php
     include("components/navbar/navbar.php");
+    include("components/backdrop/backdrop.html");
+    include("components/sideDrawer/sideDrawer.php");
     include("components/carousel/carousel.html");
     include("components/cardlist/cardlist.php");
     include("components/contact/contact.php");

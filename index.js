@@ -14,6 +14,37 @@ function goToByScroll(id) {
 
 
 !(function(d){
+    renderBackdropAndSideDrawer = (state) => {
+        if (state == true){
+            //Display the side drawer
+            $("#sideDrawer").addClass("open")
+            $("#backdrop").show()
+        }else{
+            //Hide the backdrop and sidedrawer
+            $("#sideDrawer").removeClass("open")
+            $("#backdrop").hide()
+        }
+    }
+    let sideDrawerOpen = false
+    console.log( "sidedrawer is: "+sideDrawerOpen );
+    renderBackdropAndSideDrawer( sideDrawerOpen );
+    backdropClickHandler = () => {
+        console.log("bd handler triggered");
+        sideDrawerOpen = false;
+        renderBackdropAndSideDrawer( sideDrawerOpen );
+    };
+    drawerToggleClickHandler = () => {
+        console.log("drawerToggleClickHandler triggered");
+        console.log("sd: "+ sideDrawerOpen + "gonna change to: "+!sideDrawerOpen);
+        sideDrawerOpen = !sideDrawerOpen
+        renderBackdropAndSideDrawer( sideDrawerOpen );
+    };
+    handleSideLink = ( destino ) => {
+        goToByScroll( destino );
+        sideDrawerOpen = !sideDrawerOpen
+        renderBackdropAndSideDrawer( sideDrawerOpen );
+    }
+
     //Go to some id by smooth scrolling
     function changeNavBG(type){
         nb = d.getElementsByClassName("shadow");
@@ -24,7 +55,7 @@ function goToByScroll(id) {
                     transition : 'background\-image 3s ease-out',
                     "background-image" : "linear-gradient(to top, transparent 5%, #1D1D1B 95%)",
                     "opacity" : "0.7",
-                    "height" : "130px"
+                    "height" : "125px"
                 });
                 /*$(logotipo).attr("src","img/basic/logotipo.png");*/
                 break;

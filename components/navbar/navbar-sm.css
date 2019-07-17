@@ -1,0 +1,63 @@
+@media ( max-width: 768px ){
+    /*Small screens-only*/
+    .navbar__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1d1d1b;
+    }
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*TOGGKE BUTTON*/
+    .drawertogglebutton__container{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 125px;
+        left: 1em;
+        background-color: transparent;
+        border: none;
+        z-index: 200;
+        display: none;
+    }
+    .toggle-button{
+        height: 25px;
+        width: 30px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+    .toggle-button:focus{
+        outline: none;
+    }
+    .toggle-button__line{
+        width: 24px;
+        height: 2px;
+        border-radius: 25%;
+        background-color: white;
+    }
+    .shadow{
+        display: none;
+    }
+    .drawertogglebutton__container{
+        display: flex;
+    }
+    .navbar__options{
+        display: none;
+    }
+    .navbar__logo{
+        
+    }
+}

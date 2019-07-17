@@ -14,7 +14,7 @@
 <div class="navbar__container">
     <div id="shadow" class="shadow"></div>
     <div class="drawertogglebutton__container">
-        <button class="toggle-button" onClick={props.click}>
+        <button class="toggle-button" onclick="drawerToggleClickHandler()" style="cursor: pointer">
             <div class="toggle-button__line"></div>
             <div class="toggle-button__line"></div>
             <div class="toggle-button__line"></div>
@@ -30,7 +30,6 @@
             <li onclick="<?php echo $services__link?>" class="navbar__item">SERVICIOS</li>
             <li onclick="<?php echo $contact__link?>" class="navbar__item">CONTACTO</li>
         </ul>
-
     </nav>
 
 </div>
