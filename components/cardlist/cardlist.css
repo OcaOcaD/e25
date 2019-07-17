@@ -84,14 +84,13 @@
             }
                 .card-info h1{
                     font-size: 150%;
-                    font-weight: 800;
                     margin-top: 0;
                     color: white;
                     transition: color .2s ease-in;
                 }
                 .card-desc{
                     font-size: 120%;
-                    font-weight: 600;
+                    font-weight: 300;
                     color: grey;
                     transition: color .2s ease-in;
                 }

@@ -70,6 +70,7 @@
 }
 .carousel__button--next {
   right:0;
+  transform: translateX(-10px);
 }
     /*Arrows*/
     .carousel__button--prev::after,

@@ -1,4 +1,16 @@
+@font-face{
+    src: url(fonts/Open_Sans/OpenSans-Light.ttf );
+    font-family: opensans;
+}
+ul, li{
+    font-family: 'Lato', sans-serif;
+}
+label, p, h1, h2, h3, legend, small, strong{
+    font-family: 'opensans', sans-serif;
+}
 html{
+    overflow: scroll;
+    overflow-x: hidden;
     margin: 0 !important;
     padding: 0 !important;
     width: 100vw;
@@ -7,53 +19,13 @@ body{
     margin: 0 !important;
     padding: 0 !important;
 }
-
-label, p, h1, h2, h3, ul, li, legend, small, strong{
-    font-family: 'Lato', sans-serif;
-}
-
-html {
-    overflow: scroll;
-    overflow-x: hidden;
-}
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
+    width: 10px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
-
-@font-face {
-    font-family: 'HoneywellSans';
-    font-style: normal;
-    font-weight: bold;
-    src:
-      local('fonts/HoneywellSans-Bold.otf'),
-      local('Honeywell-Bold'),
-      url(fonts/HoneywellSans-Bold.otf) format('opentype');
-}
-@font-face {
-  font-family: 'HoneywellSans';
-  font-style: medium;
-  font-weight: normal;
-  src:
-    local('fonts/HoneywellSans-Medium.otf'),
-    local('Honeywell-Medium'),
-    url(fonts/HoneywellSans-Medium.otf) format('opentype');
-}
-@font-face {
-  font-family: 'HoneywellSans';
-  font-style: normal;
-  font-weight: light;
-  src:
-    local('fonts/HoneywellSans-Light.otf'),
-    local('Honeywell-Light'),
-    url(fonts/HoneywellSans-Light.otf) format('opentype');
-}
-h1, h2, h3, label, p, legend, ul, li, button{
-    font-family: HoneywellSans,sans-serif;
+    background: #1d1d1b;
 }
 .projectMainContainer{
     background: url(img/basic/projects_bg.jpg);
