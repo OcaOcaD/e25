@@ -36,13 +36,14 @@
         }
     .related__buttton{
         position: absolute;
+        display: flex;
         height: 40px;
         width: 240px;
         max-width: 80%;
-        z-index: 110;
         border: 1px solid white;
         background-color: transparent;
         font-weight: 600;
+        justify-content: center;
         color: white;
         cursor: pointer;
         opacity: 0;

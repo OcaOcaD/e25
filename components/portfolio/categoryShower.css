@@ -27,7 +27,7 @@
             height: 100%;
             width: 20vw;
             max-width: 420px;
-            background: white;
+            background: transparent;
         }
             .project__container__top{
                 position: relative;
@@ -82,6 +82,7 @@
             }
                 .project__container__bottom h3{
                     margin: 0;
+                    color: white;
 
                 }
             .project__container:hover .project__shadow{

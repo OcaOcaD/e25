@@ -52,7 +52,7 @@ if ( $category ){
             }
             ?>
     </div>
-    <button onclick="window.location = 'projects.php'" class="cardlist__more">VER TODOS</button>
+    <!--<button onclick="window.location = 'projects.php'" class="cardlist__more">VER TODOS</button>-->
 </div> 
 <script>
     function redirectTo(categoryID){

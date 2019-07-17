@@ -43,7 +43,7 @@
             <div class="related__img">
                 <img class="related__img__img" src="img/projects/<?php echo $cl[$i]->get_img()?>.jpg" alt="Similar project not found">
             </div>
-            <button class="related__buttton">VER DETALLES</button>
+            <button id="<?php echo $cl[$i]->get_id() ?>" onclick="selectProject(this.name, this.id)" name="<?php echo $c?>" class="related__buttton"><?php echo $cl[$i]->get_title() ?></button>
             <div class="related__shadow"></div>
         </div>
         <?php 

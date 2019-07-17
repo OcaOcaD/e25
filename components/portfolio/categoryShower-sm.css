@@ -1,0 +1,15 @@
+@media ( max-width: 768px ){
+    /*Small screens-only*/
+    .cProj__row{
+        flex-direction: column;
+        height: auto;
+    }
+    .project__container{
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+    .project__container__top{
+        width: 80%;
+        margin-bottom: 1em;
+    }
+}

@@ -3,4 +3,15 @@
     .carousel-wrapper{
         padding-top: 125px;
     }
+    .carousel__button--prev, .carousel__button--next {
+        width: 2rem;
+        height: 2rem;
+    }
+    .carousel__button--prev::after,
+    .carousel__button--next::after {
+        content: " ";
+        position: absolute;
+        width: 0.5rem;
+        height: 0.5rem;
+    }
 }

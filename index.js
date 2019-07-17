@@ -11,7 +11,10 @@ function goToByScroll(id) {
     $('html, body').animate({scrollTop: topDistnce}, 800);    
 }
 
-
+function selectCategory(c){
+    window.open('projects.php?c='+c,"_blank");
+    //window.location = 'projects.php?c='+c;
+}
 
 !(function(d){
     renderBackdropAndSideDrawer = (state) => {
@@ -76,6 +79,11 @@ function goToByScroll(id) {
         if( $(window).scrollTop() > 100  ) {   
           changeNavBG(1);
         }else{
+            changeNavBG(0);
+        }
+     });
+     $(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
             changeNavBG(0);
         }
      });

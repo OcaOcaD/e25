@@ -3,7 +3,7 @@
     display: flex;
     width: 100vw;
     height: 125px;
-    z-index: 100;
+    z-index: 200;
 }
 .shadow{
     position: fixed;
@@ -12,7 +12,7 @@
     background-image: linear-gradient(to top, transparent 5%, #1D1D1B 95%);
     transition: background-image .3s ease-out;
     opacity: 0.7;
-    z-index: 100;
+    z-index: 200;
 }
 .navbar{
     position: relative;
@@ -25,7 +25,7 @@
     height: 100%;
     background-color: transparent;
     margin-top: 0px;
-    z-index: 105;
+    z-index: 205;
 }
     .navbar__logo{
         order:1;

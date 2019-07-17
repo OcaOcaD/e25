@@ -17,7 +17,6 @@
     .cardlist__title{
         padding-top: .5em;
         padding-bottom: .5em;
-        line-height: 100%;
         color: #A42035;
         font-size: 150%;
     }
@@ -56,7 +55,7 @@
             height: 100%;
             width: 100%;
             background-color: transparent;
-            z-index: 100;            
+            z-index: 10;            
             
         }
             .card-img{

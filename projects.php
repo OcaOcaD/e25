@@ -22,11 +22,17 @@
 <html lang="en">
 <head>
     <?php include("src/headers.html"); ?>
+    <link rel="stylesheet" href="utilities/fontAwesome_css/all.css">
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="components/navbar/navbar.css">
+    <link rel="stylesheet" href="components/navbar/navbar-sm.css">
+    <link rel="stylesheet" href="components/backdrop/backdrop.css">
+    <link rel="stylesheet" href="components/sideDrawer/sideDrawer.css">
     <link rel="stylesheet" href="components/portfolio/portfolio.css">
     <link rel="stylesheet" href="components/portfolio/categoryShower.css">
+    <link rel="stylesheet" href="components/portfolio/categoryShower-sm.css">
     <link rel="stylesheet" href="components/portfolio/showProject.css">
+    <link rel="stylesheet" href="components/portfolio/showProject-sm.css">
     <link rel="stylesheet" href="components/projectCarousel/projectCarousel.css">
     <link rel="stylesheet" href="components/otherProjects/otherProjects.css">
 
@@ -36,6 +42,8 @@
 <body>
     <?php
     include("components/navbar/navbar.php");
+    include("components/backdrop/backdrop.html");
+    include("components/sideDrawer/sideDrawer.php");
     echo "<div class='projectMainContainer'></div>";
     
 
@@ -44,8 +52,7 @@
     
     ?>
     <!--Adding some javascript for components here-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="utilities/jquery.js"></script>
     <script src="projects.js"></script>
-    <!--<script src="components/projectCarousel/projectCarousel.js"></script>-->
 </body>
 </html>

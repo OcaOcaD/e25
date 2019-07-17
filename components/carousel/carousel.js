@@ -51,7 +51,6 @@ function movePrev() {
         moveCarouselTo(slide);
     }
 }
-
 function disableInteraction() {
     // Set 'moving' to true for the same duration as our transition.
     // (0.5s = 500ms)
@@ -91,7 +90,7 @@ function moveCarouselTo(slide) {
           newNext = 0;
           oldNext = 1;
         }
-        console.log(
+        /*console.log(
             "oldPrev:"+ oldPrevious 
         );
         console.log(
@@ -102,7 +101,7 @@ function moveCarouselTo(slide) {
         );
         console.log(
             "NuNext:"+ newNext 
-        );
+        );*/
         // Now we've worked out where we are and where we're going, 
         // by adding/removing classes we'll trigger the transitions.
         // Reset old next/prev elements to default classes
@@ -115,10 +114,13 @@ function moveCarouselTo(slide) {
       }
     }
   }
-
+function setTimeSlider(){
+  setInterval(moveNext, 5000);
+}
   function initCarousel() {
     setInitialClasses();
     setEventListeners();
+    setTimeSlider();
     // Set moving to false so that the carousel becomes interactive
     moving = false;
   }
