@@ -27,7 +27,7 @@
     include("components/navbar/navbar.php");
     include("components/backdrop/backdrop.html");
     include("components/sideDrawer/sideDrawer.php");
-    include("components/carousel/carousel.html");
+    include("components/carousel/carousel.php");
     include("components/us/us.html");
     include("components/cardlist/cardlist.php");
     include("components/contact/contact.php");

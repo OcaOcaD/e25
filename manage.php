@@ -58,10 +58,45 @@
 </head>
 <body>
     <div class="body__container">
-        <legend><h1>Proyectos y contenido</h1></legend>
-        <div id="aja">
-
+    <legend><h1>Contenido en carousel</h1></legend>
+    <?php 
+        include("utilities/db.php");
+        $carousel_q = " SELECT * FROM `e25_carousel` WHERE 1 ";
+        $carousel = mysqli_query($connection, $carousel_q);
+        if ( $carousel ){
+            $carousel_r = mysqli_num_rows($carousel);
+            $carouselList = new SplDoublyLinkedList;
+            for ($i=0; $i < $carousel_r ; $i++) { 
+                $carousel_d = mysqli_fetch_array($carousel);
+                $cari = new Img;
+                $cari->set_id_img($carousel_d['id_img']);
+                $cari->set_name($carousel_d['name']);
+                $carouselList->push($cari);
+            }
+        }
+    ?>
+        <div class="carouselM">
+           <ul class="carouselM_list">
+                <?php
+                    for ($car=0; $car < sizeof($carouselList); $car++) { 
+                    ?>
+                        <li class="carouselM__item">
+                            <img class="carouselM_item__img" src="img/carousel/<?php echo $carouselList[$car]->get_name()?>" alt="not found">
+                            <p class="carouselM_item__name"><?php echo $carouselList[$car]->get_name() ?></p>
+                            <button onclick="handleDeleteCarousel(this.name)" name="<?php echo $carouselList[$car]->get_id_img() ?>" class="btn btn-danger btn-small">X</button>
+                        </li>
+                    <?php
+                    }
+                ?>
+                <li>
+                    <form action="utilities/management/carousel_add.php" method="POST" enctype="multipart/form-data">
+                        <input type="file" name="image">
+                        <button type="submit" class="btn btn-primary btn-sm">Agregar</button>
+                    </form>
+                </li>
+           </ul>
         </div>
+        <legend><h1>Proyectos y contenido</h1></legend>
         <div class="proj__and__images">
             <table class="proj__and__images_table table table-responsive-sm table-striped categories">
                 <thead class="thead-dark proj__and__images_head">
@@ -140,7 +175,22 @@
             }
             
         }
-        
+        function handleDeleteCarousel(id){
+            console.log(id);
+            let r = confirm("¿Quieres borrar ésta imagen?") ? true : false;
+            r = true;
+            if ( r ){
+                $.ajax({      
+                    type: "POST",
+                    url: "utilities/management/carousel_delete.php",
+                    data: ({Imgname:id}),
+                    success: function(data) {
+                        alert("Correctamente elimando. Actualiza para ver los cambios");
+                    }
+                })
+            }
+
+        }
         $(document).ready(function() {
 
 

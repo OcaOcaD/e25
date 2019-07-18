@@ -60,7 +60,7 @@ html, body{
         max-height: 45px;
     }
     .projName{
-
+        box-sizing: border-box;
     }
 .proj__and__images_images{
     width: 80%;
@@ -90,3 +90,34 @@ html, body{
         margin: 0 !important;
         padding: 0 !important;
     }
+
+.carouselM{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.carouselM_list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.carouselM__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    padding-left: 2em;
+    margin-bottom: 1em;
+}
+.carouselM_item__img{
+    margin-right: 2em;
+    max-width: 100px;
+    max-height: 65px;
+}
+.carouselM_item__name{
+    margin-right: 2em;
+}
