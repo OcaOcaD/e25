@@ -12,7 +12,7 @@
         echo "FILENAME: ".$file_name."<br>";
         $file_ext = explode('.',$file_name);
         $fileEXT = strtolower(end($file_ext));
-        $allowed = array('jpg', 'jpeg');
+        $allowed = array('jpg', 'jpeg', 'png');
         if ( in_array( $fileEXT, $allowed ) ){
             //Valid extension
             if ( $file_error === 0 ){

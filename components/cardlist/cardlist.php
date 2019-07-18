@@ -44,7 +44,7 @@ if ( $category ){
                         </div>
                         <div class="card-info">
                             <h1 class="card-title"><?php echo $cl[$i]->get_title() ?></h1>
-                            <h3 class="card-desc"><?php echo $cl[$i]->get_description() ?></h3>
+                            <h3 class="card-desc"><?php echo nl2br( $cl[$i]->get_description() ) ?></h3>
                         </div>
                     </div>
                 </div>

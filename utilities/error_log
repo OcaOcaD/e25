@@ -1,0 +1,4 @@
+[01-Jul-2019 04:02:23 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'servidor1291.il.controladordns.com' (using password: YES) in /home/estanc16/public_html/utilities/db.php on line 2
+[01-Jul-2019 04:04:34 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'servidor1291.il.controladordns.com' (using password: YES) in /home/estanc16/public_html/utilities/db.php on line 2
+[01-Jul-2019 04:04:35 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'servidor1291.il.controladordns.com' (using password: YES) in /home/estanc16/public_html/utilities/db.php on line 2
+[01-Jul-2019 04:05:02 UTC] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/estanc16/public_html/utilities/db.php on line 5

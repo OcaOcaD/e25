@@ -89,6 +89,8 @@
                     transition: color .2s ease-in;
                 }
                 .card-desc{
+                    padding-left: 0.5em;
+                    padding-right: 0.5em;
                     font-size: 120%;
                     font-weight: 300;
                     color: grey;

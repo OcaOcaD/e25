@@ -1,7 +1,7 @@
 @media ( max-width: 768px ){
     /*Small screens-only*/
     .carousel-wrapper{
-        padding-top: 125px;
+        padding-top: 80px;
     }
     .carousel__button--prev, .carousel__button--next {
         width: 2rem;

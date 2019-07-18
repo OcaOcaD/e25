@@ -1,5 +1,8 @@
 @media ( max-width: 768px ){
     /*Small screens-only*/
+    .cProj{
+        padding-bottom: calc( 70px + 0.5em );
+    }
     .cProj__row{
         flex-direction: column;
         height: auto;

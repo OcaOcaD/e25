@@ -24,3 +24,69 @@ html, body{
     padding: 0;
     overflow-x: hidden;
 }
+
+.proj__and__images{
+    width: 100vw;
+}
+    .proj__and__images form{
+        width: 100%;
+    }
+
+    .proj__and__images_table{
+        width: 100%;
+    }
+    .proj__and__images_head{
+        width: 100%;
+    }
+    .proj__and__images_body{
+        width: 100%;
+    }
+        .proj__and__images_body tr{
+            min-height: 50px;
+        }
+
+
+.proj__and__images_project{
+    width: 20%;
+    padding: 2px !important;
+    margin: 0 !important;
+}
+    .projContainer{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .projCover{
+        max-width: 45px;
+        max-height: 45px;
+    }
+    .projName{
+
+    }
+.proj__and__images_images{
+    width: 80%;
+    padding: 2px !important;
+    margin: 0 !important;
+}
+
+    .imgList{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .imgContainer{
+        height: 45px;
+    }
+    .imgImg{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .imgDelete{
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 20px;
+        margin: 0 !important;
+        padding: 0 !important;
+    }

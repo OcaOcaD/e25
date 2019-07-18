@@ -40,7 +40,6 @@
         }
     }
 
-
 ?>
 <form class="projects__form" action="newProject.php" method="POST" enctype="multipart/form-data">
 <table class="projects table table-responsive-sm table-striped categories">
@@ -96,7 +95,7 @@
         ?>
             <tr>
                 <td class="pcover">
-                    <div class="pcover__tontainer">
+                    <div class="pcover__container">
                         <input name="default__pid__input" class="default__pid__input" type="text" style="display: none" value="<?php echo $pl[$j]->get_id() ?>" >
                         <input name="default__img__input" class="default__img__input" type="text" style="display: none" value="<?php echo $pl[$j]->get_img() ?>" >
                         <div class="pcover__selector">
@@ -132,8 +131,14 @@
                         <button onclick="deleteProject(this.name)" name="<?php echo $pl[$j]->get_id(); ?>" class="btn btn-sm btn-danger discard__button">Borrar</button>
                     </div>
                     <div class="drag__container">
-                        <div class="drag__area"><small>Arrastra las imagenes del proyecto aquí</small></div>
-                        <button onclick="addImages(this.name)" name="<?php echo $pl[$j]->get_id(); ?>" class="btn btn-sm btn-primary images__button">Add images</button>
+                        <div class="drag__area">
+                            <small id="<?php echo $j ?>" name="<?php echo $pl[$j]->get_id() ?>">Arrastra las imagenes del proyecto aquí</small>
+                            <input type="text" id="<?php echo $pl[$j]->get_id() ?>" name="project_id" class="project_ids" style="display:none">
+                        </div>
+                        <div id="uploaded_files" class="drag__files">
+                                
+                        </div>
+                        <!--<button onclick="addImages(this.name)" name="<?php echo $pl[$j]->get_id(); ?>" class="btn btn-sm btn-primary images__button">Add images</button>-->
                     </div>
                 </td>
                 <input type="text" class="projectid" style="display:none" value="<?php echo $pl[$j]->get_id(); ?>">
@@ -143,6 +148,7 @@
     </tbody>
 </table>
 </form>
+<script src="utilities/management/dragArea.js" ></script>
 <script>
     function discardProject(project){
         console.log("project"+project);

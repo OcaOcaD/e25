@@ -33,7 +33,7 @@
     }
 ?>
 <div class="showP">
-    <button class="back__button" onclick="window.location = 'projects.php'">
+    <button class="back__button" onclick="window.location = 'index.php#services'">
         <small ><i class="far fa-hand-point-left"></i> Regresar</small>
     </button>
     
